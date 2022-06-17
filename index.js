@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3030
 console.log({port})
-
+app.use(express.static(__dirname + '/public'));
 getConnection();
 
 //***parseo json a fin de que al enviar desde el front los datos por json estos sean procesados* */
